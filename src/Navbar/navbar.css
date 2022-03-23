@@ -1,0 +1,17 @@
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* width: 1440px; */
+    height: 80px;
+    background: #1c2b35;
+    padding: 0 145px;
+}
+.menu a {
+    text-decoration: none;
+    color: white;
+    margin: 0 5px;
+}
+.menu a:hover {
+    color: #ff9900;
+}

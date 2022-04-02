@@ -43,4 +43,8 @@
     background: #ffe0b3;
     border: 0;
     font-size: 15px;
+    cursor: pointer;
+}
+.cart-btn:hover {
+    background: orange;
 }

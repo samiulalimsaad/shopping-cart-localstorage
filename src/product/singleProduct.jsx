@@ -1,5 +1,6 @@
 import React from "react";
 import { FaCartPlus } from "react-icons/fa";
+import { addToDB } from "../utilities/fakedb";
 import "./product.css";
 const SingleProduct = ({ product }) => {
     const { name, price, img, ratings, category, ratingsCount } = product;
@@ -23,7 +24,7 @@ const SingleProduct = ({ product }) => {
                 </div>
             </div>
             <div>
-                <button className="cart-btn">
+                <button className="cart-btn" onClick={() => addToDB(product)}>
                     Add to Cart{" "}
                     <span>
                         <FaCartPlus />

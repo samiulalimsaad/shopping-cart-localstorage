@@ -1,5 +1,8 @@
 .summary-container {
-    height: 100%;
+    position: sticky;
+    top: 0;
+    /* right: 0; */
+    /* height: 100%; */
     background: #ffe0b3;
     padding: 25px;
     color: #1c2b35;

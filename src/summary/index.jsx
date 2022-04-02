@@ -14,13 +14,13 @@ const Summary = () => {
                 <h3>Grand Total: $10</h3>
 
                 <div>
-                    <button>
+                    <button className="cart-clear">
                         Clear Cart{" "}
                         <span>
                             <FaTrashRestoreAlt />
                         </span>
                     </button>
-                    <button>
+                    <button className="review-order">
                         Review Order{" "}
                         <span>
                             <FaArrowRight />

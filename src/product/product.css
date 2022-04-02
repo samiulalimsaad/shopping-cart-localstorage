@@ -5,13 +5,16 @@
     margin: 145px;
 }
 .card {
+    position: relative;
     width: 300px;
     height: 508px;
     border: 1px solid #95a0a7;
     border-radius: 5px;
-    padding: 7px;
 }
 
+.card-body {
+    padding: 7px;
+}
 .card-img {
     display: flex;
     justify-content: center;
@@ -21,4 +24,24 @@
     width: 286px;
     height: auto;
     border-radius: 5px;
+}
+
+.product-details {
+    margin: 12px 0;
+    color: #0e161a;
+}
+
+.category {
+    margin: 47px 0;
+}
+
+.cart-btn {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    /* padding: 24px 0; */
+    height: 48px;
+    background: #ffe0b3;
+    border: 0;
+    font-size: 15px;
 }

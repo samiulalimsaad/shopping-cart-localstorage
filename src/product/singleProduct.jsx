@@ -1,19 +1,35 @@
 import React from "react";
+import { FaCartPlus } from "react-icons/fa";
 import "./product.css";
-
 const SingleProduct = ({ product }) => {
     const { name, price, img, ratings, category, ratingsCount } = product;
     return (
         <div className="card">
-            <div className="card-img">
-                <img src={img} alt={name} />
+            <div className="card-body">
+                <div className="card-img">
+                    <img src={img} alt={name} />
+                </div>
+                <div className="product-details">
+                    <h2>
+                        {name.length > 20 ? name.substr(0, 18) + "..." : name}
+                    </h2>
+                    <p>Price: ${price}</p>
+                    <div className="category">
+                        <p>Category: {category}</p>
+                        <p>
+                            Rating: {ratings} <small>({ratingsCount})</small>
+                        </p>
+                    </div>
+                </div>
             </div>
-            <h2>{name.length > 20 ? name.substr(0, 18) + "..." : name}</h2>
-            <p>Price: ${price}</p>
-            <p>Category: {category}</p>
-            <p>
-                Rating: {ratings} <small>({ratingsCount})</small>
-            </p>
+            <div>
+                <button className="cart-btn">
+                    Add to Cart{" "}
+                    <span>
+                        <FaCartPlus />
+                    </span>
+                </button>
+            </div>
         </div>
     );
 };

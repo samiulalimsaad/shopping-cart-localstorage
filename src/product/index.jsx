@@ -10,10 +10,12 @@ const Product = () => {
             .then((data) => setProducts(data));
     }, []);
 
+    console.log(products);
+
     return (
         <div className="card-container">
             {products.map((product) => (
-                <SingleProduct key={product.key} product={product} />
+                <SingleProduct key={product.id} product={product} />
             ))}
         </div>
     );

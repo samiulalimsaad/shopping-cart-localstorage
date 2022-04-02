@@ -32,6 +32,7 @@ h3 {
     font-size: 15px;
     border-radius: 5px;
     color: aliceblue;
+    cursor: pointer;
 }
 .order-details button span {
     margin-left: 10px;

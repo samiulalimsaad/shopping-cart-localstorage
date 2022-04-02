@@ -9,8 +9,20 @@ export const addToDB = (product) => {
     localStorage.setItem("ema-john", JSON.stringify(products));
 };
 
-export const getProducts = () => {
-    fetch("/products.json")
-        .then((res) => res.json())
-        .then((data) => data);
+export const getProducts = async () => {
+    const res = await fetch("/products.json");
+    const products = await res.json();
+    const tempProducts = JSON.parse(localStorage.getItem("ema-john")) || {};
+    let temp = [];
+    if (tempProducts) {
+        for (const p in tempProducts) {
+            const t = products.find((pp) => pp.id === p);
+            if (t) {
+                t.quantity = t.quantity + +tempProducts[p];
+                temp.push(t);
+            }
+        }
+    }
+    console.log(temp);
+    return temp;
 };
